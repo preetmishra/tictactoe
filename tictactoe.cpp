@@ -4,7 +4,7 @@ using namespace std;
 char matrix[3][3] = {'7','8','9','4','5','6','1','2','3'};
 char player = 'X';
 int countno;
-void draw()
+void draw()                                     //checks for catgame
 {
     system("cls");
     cout<<"\n\tTIC-TAC-TOE 1.0"<<endl;
@@ -17,7 +17,7 @@ void draw()
     cout<<"\t"<<"|  "<<matrix[2][0]<<" | "<<matrix[2][1]<<" | "<<matrix[2][2]<<"  |"<<endl;
     cout<<"\t"<<"---------------"<<endl;
 }
-void input()
+void input()                                    //takes user input                               
 {
     int a;
     cout<<"\n\n\t-It's "<<player<<" turn. "<<"Press the number of the field: ";
@@ -120,7 +120,7 @@ void toggleplayer()
     else
         player = 'X';
 }
-char ifwon()
+char ifwon()                                           //checks the results
 {
     //for X
     //rows
@@ -167,7 +167,7 @@ char ifwon()
     return '/';
 
 }
-int main()
+int main()                                              //main fucntion
 {
     countno = 0;
     Beep(300,500);
